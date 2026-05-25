@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const router = require("./route/todoRoute"); // Fixed: Added missing semicolon
+const router = require("./Route/todoRoute");
+
 
 // const live_url = "";
 

@@ -1,4 +1,4 @@
-const TodoModel = require('../model/todoModel');
+const TodoModel = require('../model/todoModel.js');
 
 const getAllTodo = async (req, res) => { // Changed to singular to match your router import
     try {
