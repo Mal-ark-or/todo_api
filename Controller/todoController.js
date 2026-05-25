@@ -47,19 +47,16 @@ const updateTodo = async (req, res) => {
             req.body, 
             { new: true, runValidators: true } 
         );
-        
-        try (!todo) {
-            return res.status(404).json({ message: "Todo not found to update" });
-        }
-        
+
         return res.status(200).json({
             message: "Todo updated successfully",
             data: todo
         });
     } catch (err) {
         return res.status(500).json({ error: err.message });
-    } 
+    }
 };
+
 
 const deleteTodo = async (req, res) => {
     try {
@@ -73,10 +70,10 @@ const deleteTodo = async (req, res) => {
     }
 };
 
-module.exports = { // Fixed: changed 'export' to 'exports'
-    getAllTodo, // Changed to match the function name at the top
+module.exports = { 
+    getAllTodo, 
     getOneTodo,
     createTodo,
     updateTodo,
     deleteTodo
-};
+}
